@@ -10,6 +10,7 @@ A simple browser based memo app.
     ```
     1. Turn off lights before leaving office
     ```
+    The change should be persisted even after the page is reloaded.
 
 ## Restrictions
 - You cannot modify any files except answer.js

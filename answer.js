@@ -14,23 +14,7 @@ if (inputField) {
 
       memoItemsList.push(e.target.value);
       localStorage.setItem('memoItems', JSON.stringify(memoItemsList));
-      loadMemoItemslist();
+      window.location.reload();
     }
-  });
-}
-
-function loadMemoItemslist() {
-  var memoItemsListDom = $('memo-items-list');
-  while (memoItemsListDom.firstChild) {
-    memoItemsListDom.removeChild(memoItemsListDom.firstChild);
-  }
-
-  var memoItems = JSON.parse(localStorage.getItem('memoItems') || '[]');
-  var n = 0;
-  memoItems.forEach((item) => {
-    n++;
-    var memoItemDom = document.createElement('p');
-    memoItemDom.innerHTML = n + ". " + item;
-    memoItemsListDom.appendChild(memoItemDom);
   });
 }
